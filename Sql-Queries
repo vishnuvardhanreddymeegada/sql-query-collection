@@ -1,0 +1,37 @@
+CREATE DATABASE StudentDB;
+
+USE StudentDB;
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50) NOT NULL,
+    age INT,
+    course VARCHAR(50),
+    marks INT
+);
+INSERT INTO Students VALUES
+(1, 'Rahul', 20, 'Computer Science', 85),
+(2, 'Anjali', 21, 'Electronics', 78),
+(3, 'Vikram', 22, 'Mechanical', 90),
+(4, 'Sneha', 20, 'Computer Science', 88),
+(5, 'Arjun', 23, 'Civil', 72);
+
+-- Select all records
+SELECT * FROM Students;
+
+-- Select specific columns
+SELECT student_name, marks FROM Students;
+
+-- Select students with marks greater than 80
+SELECT * FROM Students
+WHERE marks > 80;
+
+-- Select Computer Science students
+SELECT * FROM Students
+WHERE course = 'Computer Science';
+
+-- Sort students by marks (highest first)
+SELECT * FROM Students
+ORDER BY marks DESC;
+
+-- Show unique courses
+SELECT DISTINCT course FROM Students;
