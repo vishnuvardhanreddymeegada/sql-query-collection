@@ -34,4 +34,4 @@ SELECT * FROM Students
 ORDER BY marks DESC;
 
 -- Show unique courses
-SELECT DISTINCT course FROM Students;
+SELECT DISTINCT course FROM Students
