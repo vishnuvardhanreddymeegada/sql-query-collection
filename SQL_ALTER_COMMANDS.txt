@@ -1,0 +1,26 @@
+SQL ALTER COMMAND EXAMPLES
+
+1.  Add a New Column ALTER TABLE employees ADD salary DECIMAL(10,2);
+
+2.  Add Multiple Columns ALTER TABLE employees ADD ( department
+    VARCHAR(50), joining_date DATE );
+
+3.  Modify Column Data Type ALTER TABLE employees MODIFY salary FLOAT;
+
+4.  Rename a Column ALTER TABLE employees RENAME COLUMN salary TO
+    monthly_salary;
+
+5.  Drop a Column ALTER TABLE employees DROP COLUMN joining_date;
+
+6.  Add a Primary Key ALTER TABLE employees ADD CONSTRAINT pk_emp
+    PRIMARY KEY (id);
+
+7.  Add a Foreign Key ALTER TABLE employees ADD CONSTRAINT fk_dept
+    FOREIGN KEY (department_id) REFERENCES departments(id);
+
+8.  Drop a Constraint ALTER TABLE employees DROP CONSTRAINT pk_emp;
+
+9.  Rename a Table ALTER TABLE employees RENAME TO staff;
+
+10. Add Default Value ALTER TABLE employees ALTER COLUMN department SET
+    DEFAULT ‘General’;
